@@ -15,8 +15,7 @@ app.config['MYSQL_DB'] = db['mysql_db']
 mysql = MySQL(app)
 
 
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     if request.method == "POST":
         userFeedback = request.form
