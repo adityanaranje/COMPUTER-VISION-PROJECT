@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<style >
+  .head1{
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  font-style:"Times New Roman";
+  }
+
+  
+  .head2{
+  color:black;
+  font-size:40px;
+  font-weight:bold;
+  font-style:"Times New Roman";
+  margin-top: 40px;
+  }
+
+  .para{
+  color:black;
+  font-size:28px;
+  font-weight:bold;
+  font-family: "cambria";
+  margin-top: 45px;
+  line-height: 1.2;
+  }
+
+  .link{
+  color: #464646;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.link1{
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  margin-right: 70px;
+  margin-left: 17px;
+  margin-top: 50px;
+}
+
+
+  .button1{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px; 
+  }
+
+  .feedback{
+    margin-top: 150px;
+    margin-bottom: 40px;
+  }
+
+  .hrline {
+  border: 2px solid red;
+  margin-top: 30px;
+}
+
+</style>
+
+<div class="container my-3">
+
+    <h1 class="fw-bold head1"><center>COMPUTER VISION PROJECT</center></h1>
+
+</div>
+
+<div>
+<div class="container">
+    <h3 class="fw-blod head2 mx-2"> 1. FACE DETECTION </h3>
+
+    <img src="/static/face.jpg" class="rounded mx-3" align="left" alt="Face Detection" width=650 height="380" HSPACE=60 VSPACE=40>
+
+    <p class="para">In this project I built a Face detector using OpenCV. There are various Haar cascades present on OpenCV's Github repository. OpenCV already contains many pre-trained classifiers for face, eyes, smiles, etc. For this project I used OpenCV's FrontalFace Haar Cascade Classifier which is a XML file. As per your need you can experiment with other classifiers as well. You can download the pre-trained classifier XML file <a href="https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml" class="link">haarcascade frontalface default.xml</a> or you can visit <a href="https://github.com/opencv/opencv/tree/master/data/haarcascades" class="link"> OpenCV's Github repository</a>.</p>
+</div>
+
+
+<div class="mb-5">
+<div>  
+      <form action="imageface" id="upload-file" method="post" enctype="multipart/form-data">
+        <div class="container button1">
+          <label></label>
+          <input type="file" name="image1" id="imageUpload" accept=".png, .jpg, .jpeg" style="color: red;" >
+        </div>
+        <div class="container button1">
+          <input type="submit" name="btn-lg" class="btn btn-outline-danger btn-lg" value="Select Image" style="width: 290px;">
+        </div>
+        
+    </form>
+ </div>
+ <div>  
+      <form action="videoface" id="upload-file" method="post" enctype="multipart/form-data">
+        <div class="container button1">
+          <label></label>
+          <input type="file" name="video1" id="imageUpload" accept=".mp4" style="color: #F7D007FF;" >
+        </div>
+        <div class="container button1">
+          <input type="submit" name="btn-lg" class="btn btn-outline-warning btn-lg" value="Select Video" style="width: 290px;">
+        </div>   
+    </form>
+ </div>
+
+ <div class="container button1">
+  <a href="webcamface" type="button" class="btn btn-outline-info btn-lg mx-3" style="width: 290px;">Start Webcam</a>
+   
+ </div>   
+  
+  </div>
+
+
+<div class="container">
+    <h3 class="fw-blod head2 mx-2"> 2. OBJECT DETECTION </h3>
+
+    <img src="/static/object.jpg" class="rounded mx-3" align="right" alt="Face Detection" width=650 height="423" HSPACE=60 VSPACE=40>
+
+    <p class="para">Object detection is probably the most profound aspect of computer vision due the number practical use cases. Object detection has been widely used for face detection, vehicle detection, security systems and driverless cars. Here I have created a project to detect objects using OpenCV and python. This Object Detection OpenCV method will be able to detect objects with good accuracy. For object detection from Webcam and Video I have used Mobile Net SSD object detector and for image used yolov3 object detector. Mobile Net SSD is faster than the yolov3 but gives less accuracy than yolov3. </p>
+</div>
+
+
+<div class="mb-5">
+  <div>  
+      <form action="imageobject" id="upload-file" method="post" enctype="multipart/form-data">
+        <div class="container button1">
+          <label></label>
+          <input type="file" name="image2" id="imageUpload" accept=".png, .jpg, .jpeg" style="color: red;" >
+        </div>
+        <div class="container button1">
+          <input type="submit" name="btn-lg" class="btn btn-outline-danger btn-lg" value="Select Image" style="width: 290px;">
+        </div>
+        
+    </form>
+ </div>
+  <div>  
+      <form action="videoobject" id="upload-file" method="post" enctype="multipart/form-data">
+        <div class="container button1">
+          <label></label>
+          <input type="file" name="video2" id="videoUpload" accept=".mp4" style="color: #F7D007FF;" >
+        </div>
+        <div class="container button1">
+          <input type="submit" name="btn-lg" class="btn btn-outline-warning btn-lg" value="Select Video" style="width: 290px;">
+        </div>   
+    </form>
+ </div>
+ <div class="container button1">
+  <a href="webcamobject" type="button" class="btn btn-outline-info btn-lg mx-3" style="width: 290px;">Start Webcam</a>
+   
+ </div>   
+  
+  </div>
+
+</div>
+
+<div>
+  
+  <h3 class="fw-bold my-5"><center> Technologies Used </center></h3>
+  <h6 class="fw-bold text-muted"><center> Click To View </center></h6>
+</div>
+
+<div class="container my-5">
+  <center>
+    
+    <a href="https://www.python.org/doc/" style="color:#142AEAFF;" class="link1 ">Python</a>
+    
+    <a href="https://docs.opencv.org/master/" style="color:#1AE437FF;" class="link1">OpenCV</a>
+    
+    <a href="https://numpy.org/doc/" style="color:#38C6F5FF;" class="link1">Numpy</a>
+        
+    <a href="https://flask.palletsprojects.com/en/2.0.x/" style="color:#7F7F7FFF;" class="link1">Flask</a>
+   
+    <a href="https://dev.mysql.com/doc/" style="color:#EB138EFF;" class="link1">MySQL</a>
+
+    <a href="https://devdocs.io/html/" style="color:#F0CD2FFF;" class="link1">HTML</a>
+
+    <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" style="color:#6D629CFF;" class="link1">Bootstrap</a>
+
+    <a href="https://learn.getgrav.org/16/advanced/yaml" style="color:#72372FFF;" class="link1">Yaml</a>
+  </center>
+    
+</div>
+<div>
+  
+  <h3 class="fw-bold my-5"><center> Platforms Used </center></h3>
+
+</div>
+<div class="container my-5">
+  <center>
+    
+    <a href="https://docs.spyder-ide.org/current/index.html" style="color:#CB400CFF;" class="link1 ">Spyder</a>
+    
+    <a href="https://www.sublimetext.com/docs/" style="color:#F2B20CFF;" class="link1">Sublime-Text</a>
+    
+    <a href="https://devcenter.heroku.com/categories/reference" style="color:#9144E2FF;" class="link1">Heroku</a>
+        
+  </center>
+    
+</div>
+
+
+<div class="container">
+  
+    <h3 class="fw-bold feedback"><center>FEEDBACK</center></h3>
+
+      <form class="row g-3" id="upload-file" method="post">
+  <div class="my-2 ">
+    <label for="text" class="form-label">First Name</label>
+    <input type="text" class="form-control" name="first name" id="first name">
+  </div>
+  <div class=" my-2">
+    <label for="last name" class="form-label">Last Name</label>
+    <input type="text" class="form-control" name="last name" id="last name">
+  </div>
+  
+  <div class="my-2">
+    <label for="liked" class="form-label">Was it good?</label>
+    <select  class="form-select" name="liked" id="liked">
+      <option selected>Choose</option>
+      <option>
+        <option value="1">Yes</option>
+      <option value="0">No</option>
+      </option>
+    </select>
+  </div>
+  
+  <div class="my-2">
+    <label for="feedback" class="form-label">Your Feedback</label>
+    <input type="text" class="form-control" name="feedback" id="feedback">
+  </div>
+
+  <div class="mb-4">
+    <input type="submit" class="btn btn-primary" value="Submit" style="width: 150px;">
+  </div>
+</form>
+
+<hr class="hrline">
+
+<div>
+  
+  <h3 class="fw-bold my-5"><center> Contact Info </center></h3>
+
+
+</div>
+
+<div class="container my-5">
+  <center>
+    <img src="/static/linkedin.png" alt="LinkedIn Logo" width=30 height="30">
+    <a href="https://www.linkedin.com/in/anaranje/" style="color:#0D77B4FF;" class="link1 ">LinkedIn</a>
+    
+    <img src="/static/github.png"  alt="Github Logo" width=30 height="30">
+    <a href="https://github.com/adityanaranje" style="color:#000000;" class="link1">Github</a>
+    
+    <img src="/static/kaggle.png"  alt="Kaggle Logo" width=30 height="30">
+    <a href="https://www.kaggle.com/adityanaranje" style="color:#38C6F5FF;" class="link1">Kaggle</a>
+    
+    <img src="/static/instagram.png"  alt="Instagram Logo" width=30 height="30">
+    <a href="https://www.instagram.com/delta_venom77" style="color:#DC22A0FF;" class="link1">Instagram</a>
+
+    <img src="/static/mail.png" alt="Mail Logo" width=30 height="30">
+    <a href="mailto:aditya.naranje7@gmail.com" style="color:#F0372FFF;" class="link1">E-mail</a>
+  </center>
+    
+</div>
+
+
+{% endblock body %}

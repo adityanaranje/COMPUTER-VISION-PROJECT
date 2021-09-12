@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Face Detection From Image{% endblock title %}
+
+{% block body %}
+
+<style>
+        body{
+                background-color: black;
+        }
+</style>
+<div >
+        <center>
+                <h1 style="color:#F72807FF;" class="mt-4 fw-bold">FACE DETECTION FROM IMAGE</h1>
+    
+        <div class="mt-5">
+                <img src="{{url_for('getimageface')}}" class="border border-danger border-4" alt="Please Select Image First">
+    
+        </div>
+
+        <a href="/" type="button" class="btn btn-outline-danger btn-lg mx-3 mt-5">Back To Homepage</a>
+        </center>
+
+</div>
+
+
+{% endblock body %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Object Detection From Video{% endblock title %}
+
+{% block body %}
+
+<style>
+        body{
+                background-color: black;
+        }
+</style>
+<div >
+        <center>
+                <h1 style="color:#FBD503FF;" class="mt-4 fw-bold">OBJECT DETECTION FROM VIDEO</h1>
+    
+        <div class="mt-5">
+                <img src="{{url_for('getvideoobject')}}" class="border border-warning border-4" alt="Please Select Video First">
+    
+        </div>
+
+        <a href="/" type="button" class="btn btn-outline-warning btn-lg mx-3 mt-5">Back To Homepage</a>
+        </center>
+
+</div>
+
+
+{% endblock body %}

@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block title %}Face Detection From Webcam{% endblock title%}
+{% block body %}
+
+<style>
+        body{
+                background-color: black;
+        }
+</style>
+<div >
+        <center>
+                <h1 style="color:#38F0F5FF;" class="mt-4 fw-bold">FACE DETECTION FROM WEBCAM</h1>
+    
+        <div class="mt-5">
+                <img src="{{url_for('getwebcamface')}}" class="border border-info border-4" width=800 height=500>
+    
+        </div>
+
+        <a href="/" type="button" class="btn btn-outline-info btn-lg mx-3 mt-5">Back To Homepage</a>
+        </center>
+
+</div>
+
+
+{% endblock %}
