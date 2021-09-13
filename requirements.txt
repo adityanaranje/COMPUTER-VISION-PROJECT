@@ -9,3 +9,5 @@ Jinja2>=3.0.1
 MarkupSafe==2.0.1
 Werkzeug==2.0.1
 PyYAML==5.4.1
+cassandra-driver==3.25.0
+certifi==2021.5.30
