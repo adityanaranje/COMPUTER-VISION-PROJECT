@@ -1,4 +1,5 @@
 import cv2
+from imutils.video import WebcamVideoStream
 
 faceDetect = cv2.CascadeClassifier('data/haarcascade_facedetect.xml')
 
@@ -6,10 +7,10 @@ faceDetect = cv2.CascadeClassifier('data/haarcascade_facedetect.xml')
 # Face detection from webcam
 class webcameraface(object):
     def __init__(self):
-        self.video = cv2.VideoCapture(0)
+        self.video = WebcamVideoStream(src=0).start()
 
     def __del__(self):
-        self.video.release()
+        self.video.stop()
 
     def get_frame1(self):
         ret, frame = self.video.read()
