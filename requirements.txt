@@ -9,3 +9,4 @@ Jinja2>=3.0.1
 MarkupSafe==2.0.1
 Werkzeug==2.0.1
 PyYAML==5.4.1
+imutils>=0.5.4
