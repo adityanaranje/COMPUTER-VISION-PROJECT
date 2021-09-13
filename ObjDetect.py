@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from imutils.video import WebcamVideoStream
 thres = 0.5  # Threshold to detect object
 nms_threshold = 0.2
 
@@ -25,10 +26,10 @@ COLORS = np.random.randint(0, 255, size=(len(classNames), 3), dtype="uint8")
 
 class webcameraobject(object):
     def __init__(self):
-        self.video = cv2.VideoCapture(0)
+        self.video = WebcamVideoStream(src=0).start()
 
     def __del__(self):
-        self.video.release()
+        self.video.stop()
 
     def get_frame2(self):
         success, img = self.video.read()
