@@ -1,6 +1,6 @@
 from flask import Flask, render_template, Response, request
-from FaceDetect import webcameraface, imagefaces, videofaces
-from ObjDetect import webcameraobject, videoobjects, imageobjects
+from FaceDetect import  imagefaces, videofaces
+from ObjDetect import  videoobjects, imageobjects
 from flask_mysqldb import MySQL
 import yaml
 
@@ -38,26 +38,6 @@ def home():
 
 # Face Detection
 
-# Webcam
-
-
-def gen_webcam1(FaceDetect):
-    while True:
-        frame = FaceDetect.get_frame1()
-        yield(b'--frame\r\n'
-              b'Content-Type:  image/jpeg\r\n\r\n' + frame +
-              b'\r\n\r\n')
-
-
-@app.route('/webcamface/')
-def webcamface():
-    return render_template("webcamface.html")
-
-
-@app.route('/getwebcamface')
-def getwebcamface():
-    return Response(gen_webcam1(webcameraface()),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # Video
 
@@ -108,25 +88,6 @@ def getimageface():
 
 
 # Object Detection
-# Webcam
-def gen_webcam2(ObjDetect):
-    while True:
-        frame = ObjDetect.get_frame2()
-        yield(b'--frame\r\n'
-              b'Content-Type:  image/jpeg\r\n\r\n' + frame +
-              b'\r\n\r\n')
-
-
-@app.route('/webcamobject/')
-def webcamobject():
-    return render_template("webcamobject.html")
-
-
-@app.route('/getwebcamobject')
-def getwebcamobject():
-    return Response(gen_webcam2(webcameraobject()),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-
 # Video
 
 
