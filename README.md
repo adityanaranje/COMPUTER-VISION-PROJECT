@@ -24,5 +24,9 @@
 ### Spyder, Github, Heroku , Sublime-Text
 
 
+## Face Detection
+![](https://github.com/adityanaranje/COMPUTER-VISION-PROJECT/blob/main/static/face_r.gif)
+
+
 ## Object Detection
-![](https://github.com/adityanaranje/COMPUTER-VISION-PROJECT/blob/main/static/obj_detect.mp4)
+![](https://github.com/adityanaranje/COMPUTER-VISION-PROJECT/blob/main/static/obj_detect.gif)
