@@ -22,3 +22,7 @@
 
 ## Platforms Used:
 ### Spyder, Github, Heroku , Sublime-Text
+
+
+## Object Detection
+![](https://github.com/adityanaranje/COMPUTER-VISION-PROJECT/blob/main/static/obj_detect.mp4)
