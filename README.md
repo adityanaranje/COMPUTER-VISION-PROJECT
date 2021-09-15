@@ -1,4 +1,4 @@
-# Project Title : Face and Object Detection Using OpenCV
+# Project Title : Face and Object Detection Using Python
 # Technologies : Computer Vision
 # Level : Intermidiate 
 
