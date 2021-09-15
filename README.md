@@ -1,12 +1,12 @@
 # Project Title : Face and Object Detection Using Python
 # Technologies : Computer Vision
-# Level : Intermidiate 
+# Level : Intermediate 
 
 ## Aim:
-### -> To apply the computer vision classifiers for detection of face and object from image and video , and create a web application for same.
+### -> To apply the computer vision classifiers for detection of face and object from image and video , and create a end to end web application project for same.
 
 ## Approach
-### -> Used the OpenCV's pre-trained haar cascade classifier for face detection and Mobilr Net SSD for object detection.
+### -> Used the OpenCV's pre-trained haar cascade classifier for face detection and Mobile Net SSD for object detection.
 
 ## Tools Used:
 ### 1. Python 
@@ -30,3 +30,6 @@
 
 ## Object Detection
 ![](https://github.com/adityanaranje/COMPUTER-VISION-PROJECT/blob/main/static/obj_detect.gif)
+
+
+# Thank You
