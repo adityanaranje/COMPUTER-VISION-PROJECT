@@ -32,4 +32,8 @@
 ![](https://github.com/adityanaranje/COMPUTER-VISION-PROJECT/blob/main/static/obj_detect.gif)
 
 
+## Model Deployment Link:
+https://computer-vision-project-an.herokuapp.com/
+
+
 # Thank You
