@@ -1,3 +1,7 @@
+<p align="center" >
+    PERSONAL PROJECT
+  </p>
+
 # Project Title : Face and Object Detection Using Python
 # Technologies : Computer Vision
 # Level : Intermediate 
